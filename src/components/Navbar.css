@@ -1,0 +1,17 @@
+.Navbar {
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 35px;
+  width: 100%;
+  background-color: rgba(21, 14, 92, 0.9);
+  font-size: 64px;
+}
+
+@media screen and (max-width: 1849px) {
+  .Navbar {
+    padding-top: 10px;
+  }
+}

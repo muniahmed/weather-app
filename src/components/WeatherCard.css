@@ -1,0 +1,83 @@
+.WeatherCard {
+  display: flex;
+  border: 5px solid white;
+  border-radius: 15px;
+  width: 300px;
+  max-width: 300px;
+  height: 500px;
+  animation-name: stretch;
+  animation-duration: 2.5s;
+  margin: 30px 30px;
+  font-size: 24px;
+  justify-content: center;
+}
+
+i {
+  color: white;
+  font-size: 108px;
+  padding-top: 55px;
+}
+
+@keyframes stretch {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+
+  10% {
+    width: 0px;
+  }
+
+  30% {
+    height: 0px;
+    width: 300px;
+  }
+
+  100% {
+    height: 500px;
+  }
+}
+
+.content {
+  animation-name: fadein;
+  animation-duration: 5s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.date {
+  margin: 15px;
+  padding: 0;
+}
+
+.cond {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.cond p {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.cond i {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+}

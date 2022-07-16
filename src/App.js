@@ -42,11 +42,12 @@ class App extends React.Component {
       })
       .then((result) => {
         for (let i = 0; i < 4; i++) {
-          let date = result.list[i * 8].dt_txt;
-          let temp = Math.round(result.list[i * 8].main.temp)
-          let condition = result.list[i * 8].weather[0].main.toLowerCase();
-          let pop = result.list[i * 8].pop * 100;
-          let wind = Math.round(result.list[i * 8].wind.speed * 3.6);
+          let index = (i * 8) + 5;
+          let date = result.list[index].dt_txt;
+          let temp = Math.round(result.list[index].main.temp)
+          let condition = result.list[index].weather[0].main.toLowerCase();
+          let pop = result.list[index].pop * 100;
+          let wind = Math.round(result.list[index].wind.speed * 3.6);
 
           tempforecast.push({ date: date, temp: temp, condition: condition, pop: pop, wind: wind })
         }

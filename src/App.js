@@ -46,7 +46,7 @@ class App extends React.Component {
           let date = result.list[index].dt_txt;
           let temp = Math.round(result.list[index].main.temp)
           let condition = result.list[index].weather[0].main.toLowerCase();
-          let pop = result.list[index].pop * 100;
+          let pop = Math.round(result.list[index].pop * 100);
           let wind = Math.round(result.list[index].wind.speed * 3.6);
 
           tempforecast.push({ date: date, temp: temp, condition: condition, pop: pop, wind: wind })

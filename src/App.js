@@ -79,8 +79,10 @@ class App extends React.Component {
                 ? "Rain today" : "No rain today"}
             wind={day.wind}
           />)}
-
-      </div>
+        <div className='Credits'>
+          <p>Created by <span style={{ color: "white" }}>Ahmed Muni</span></p>
+        </div>
+      </div >
     );
   }
 }

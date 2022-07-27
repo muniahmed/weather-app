@@ -3,6 +3,9 @@ import './App.css';
 import WeatherCard from './components/WeatherCard';
 import Navbar from './components/Navbar';
 
+const key = "f174dce301ae0f8a949ee0c5afe9fbad";
+const city = "Waterloo";
+
 class App extends React.Component {
 
   constructor(props) {
@@ -13,8 +16,7 @@ class App extends React.Component {
   }
 
   getWeather() {
-    const key = "f174dce301ae0f8a949ee0c5afe9fbad";
-    const city = "Toronto";
+
     let tempforecast = [];
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`)
@@ -80,6 +82,7 @@ class App extends React.Component {
             wind={day.wind}
           />)}
         <div className='Credits'>
+          <p>Showing weather for: <strong>{city}</strong></p>
           <p>Created by <span style={{ color: "white" }}>Ahmed Muni</span></p>
         </div>
       </div >
